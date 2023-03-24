@@ -9,8 +9,8 @@
   <body>
     <div class="main-container">
         <div style="margin-top: 15%;">
-            <form class="search-bar">
-                <input type="text" placeholder="Gene Mutation Disease" name="search" id="search">
+            <form class="search-bar" method="post" action="/submit">
+                <input type="text" placeholder="Gene Mutation Disease" name="search" id="input">
                 <button type="submit"><img src="static/Image/search.png"/></button>
             </form>
             <div class="container">
@@ -22,7 +22,7 @@
      </div>
 
     <script src="static/script.js"></script>
-    <script>
+    <!-- <script>
 
       $(document).ready(function(){
         $("form.search-bar").submit(function(e){
@@ -33,12 +33,10 @@
           type="post",
           fd = new FormData();
 
-          console.log($("#search").val())
+          console.log($("#input").val())
       
-          fd.append("search",$("#search").val())
+          fd.append("search",$("#input").val())
 
-          console.log(fd)
-      
           $.ajax({
               url:url,
               type:type,
@@ -56,6 +54,6 @@
         //   });
       });
       
-      </script>
+      </script> -->
   </body>
 </html>
